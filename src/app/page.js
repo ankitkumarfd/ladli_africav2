@@ -1,103 +1,135 @@
+import HomeSection from "@/components/HomeSection";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import OurImpact from "@/components/OurImpact";
+import OurInitiative from "@/components/OurInitiative";
+import aboutImage from "@/public/assets/aboutimage.jpg";
+import ladliimage from "@/public/assets/ladliindia.jpg";
+import Dignitaries from "@/components/Dignitaries";
+import Partners from "@/components/Partners";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <HomeSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="container mx-auto px-4 my-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+              About Ladli AFRICA
+            </h2>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
+            {/* Left Column - Text */}
+            <div className="lg:w-1/2 text-gray-700 space-y-6 text-justify">
+              <p>
+                Ladli Foundation USA, a women-led non-profit organization,
+                serves as the United States chapter of Ladli Foundation Trust,
+                India, an emerging international NGO experienced in directly
+                impacting over 2 million beneficiaries through its innovative
+                social initiatives, earning it a special consultative status in
+                the Economic and Social Council since 2020. Founded in 2012 by a
+                slum boy, who began his life as a child laborer, driven by the
+                concern of protecting his sister from evil practices after their
+                parents abandoned them in a crime-ridden slum during his
+                childhood.
+              </p>
+              <p className="text-justify">
+                Committed to the advancement of the One Earth-One Health
+                approach, Ladli Foundation USA leads transformative and
+                sustainable social projects. Its focus areas include providing
+                equitable access to healthcare, education, life skills, and
+                mental well-being, particularly targeting vulnerable women and
+                youth. It also aims to raise global awareness by promoting
+                ancient Indian traditional practices for sustainable living
+                worldwide, under the patronage of H.H. Swami Avdheshannad Giri,
+                an International Spiritual Leader, Vedanta Scholar, and the
+                Chief of India's oldest ascetic tradition.
+              </p>
+              <Link
+                href="/"
+                className="text-pink-600 font-semibold hover:underline text-lg inline-block"
+              >
+                Know more &rarr;
+              </Link>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="lg:w-1/2">
+              <Image
+                src={aboutImage}
+                alt="About Ladli Africa"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <OurImpact />
+
+      <OurInitiative />
+
+      <section className="container mx-auto px-4 my-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+              About Ladli Foundation Trust India
+            </h2>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
+            {/* Left Column - Text */}
+            <div className="lg:w-1/2 text-gray-700 space-y-6 text-justify">
+              <p>
+                About Ladli Foundation Trust India ​Ladli Foundation is a
+                grassroots-level non-profit organization known for bringing
+                positive reformative changes in society with a mission of
+                building a gender-sensitized inclusive society with equal access
+                to basic, essential amenities and services, healthcare,
+                education, workforce participation, etc by women - the
+                foundation has been diligently working in 50 districts across 12
+                states in India. The organization is granted special
+                consultative status in United Nations ECOSOC and conferred with
+                the National Award by Govt. of India for directly serving over
+                one million beneficiaries through its action-research-based
+                projects by promoting sustainable living for achieving UN SDGs.
+              </p>
+
+              <Link
+                href="/"
+                className="text-pink-600 font-semibold hover:underline text-lg inline-block"
+              >
+                Know more &rarr;
+              </Link>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="lg:w-1/2">
+              <Image
+                src={ladliimage}
+                alt="About Ladli India"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Dignitaries />
+
+      <Partners />
     </div>
   );
 }

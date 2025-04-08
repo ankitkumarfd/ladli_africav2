@@ -1,18 +1,16 @@
-@import "tailwindcss";
-
 .flip-card {
   perspective: 1000px;
 }
 
-.flip-card-inner-dignitary {
+.flip-card-inner {
   position: relative;
-  height: 480px;
+  height: 450px;
   text-align: center;
   transform-style: preserve-3d;
   transition: transform 0.8s;
 }
 
-.flip-card:hover .flip-card-inner-dignitary {
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
