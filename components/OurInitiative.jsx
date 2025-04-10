@@ -13,68 +13,70 @@ import initiative4 from "@/public/assets/initiatives/initiative4.jpg";
 
 const initiativesData = [
   {
-    title: "Give Social Protection to Vulnerable Women",
+    title: "Empowering Girls through Menstrual Hygiene Management (MHM)",
     description:
-      "Shagun is a word derived from Sanskrit that means auspicious, good omen, or blessing. Shagun, or the offering of gifts, is a way of bringing blessings and harmony to people's lives.",
+      "The initiative aims to empower adolescent girls with knowledge, resources, and a supportive environment to manage menstruation with dignity and confidence.",
     image: initiative1,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/social-security-for-vulnerable-women",
+    readMoreLink: "/initiatives/mhm",
   },
   {
-    title: "Digital Divide for marginalized Education",
+    title: "Advancing Sexual and Reproductive Health for School girls",
     description:
-      "Empowering drop-outs and out-of-school students by providing quality education and a dignified future through unique mobile classes and sensitization workshops.",
+      "Empower schoolgirls with knowledge, life skills, and safe spaces to make informed decisions about their bodies and health—laying the foundation for confident, healthy, and empowered young women.",
     image: initiative2,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/digital-divide-for-marginalized-education",
+    readMoreLink: "/initiatives/advancing-srh",
   },
   {
-    title: "Give a new life to GBV survivors​",
+    title: "Strengthening WASH Infrastructure & Awareness in Schools",
     description:
-      "Supporting gender-based violence survivors to build their Resilience through Dance, Yoga, meditation, and counseling",
+      "Support to build inclusive, sustainable WASH infrastructure in schools while fostering hygiene awareness and behavioural change among students, teachers, and communities",
     image: initiative3,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/supporting-gbv-survivors",
+    readMoreLink: "/initiatives/wash-awareness",
   },
   {
-    title: "My Village is My Pilgrimage​",
+    title:
+      "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
     description:
-      "Aims to reconnect overseas Indian youth with their roots and prevent cultural isolation.",
+      "School-based awareness and sensitization program designed to educate adolescents about TB and HIV prevention, symptoms, and the importance of empathy and non-discrimination. ",
     image: initiative4,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/my-village-is-my-pilgrimage",
+    readMoreLink: "/initiatives/tb-and-hiv",
   },
   {
-    title: "Give Social Protection to Vulnerable Women",
+    title: "Empowering Girls through Menstrual Hygiene Management (MHM)",
     description:
-      "Shagun is a word derived from Sanskrit that means auspicious, good omen, or blessing. Shagun, or the offering of gifts, is a way of bringing blessings and harmony to people's lives.",
+      "The initiative aims to empower adolescent girls with knowledge, resources, and a supportive environment to manage menstruation with dignity and confidence.",
     image: initiative1,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/social-security-for-vulnerable-women",
+    readMoreLink: "/initiatives/mhm",
   },
   {
-    title: "Digital Divide for marginalized Education",
+    title: "Advancing Sexual and Reproductive Health for School girls",
     description:
-      "Empowering drop-outs and out-of-school students by providing quality education and a dignified future through unique mobile classes and sensitization workshops.",
+      "Empower schoolgirls with knowledge, life skills, and safe spaces to make informed decisions about their bodies and health—laying the foundation for confident, healthy, and empowered young women.",
     image: initiative2,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/digital-divide-for-marginalized-education",
+    readMoreLink: "/initiatives/advancing-srh",
   },
   {
-    title: "Give a new life to GBV survivors​",
+    title: "Strengthening WASH Infrastructure & Awareness in Schools",
     description:
-      "Supporting gender-based violence survivors to build their Resilience through Dance, Yoga, meditation, and counseling",
+      "Support to build inclusive, sustainable WASH infrastructure in schools while fostering hygiene awareness and behavioural change among students, teachers, and communities",
     image: initiative3,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/supporting-gbv-survivors",
+    readMoreLink: "/initiatives/wash-awareness",
   },
   {
-    title: "My Village is My Pilgrimage​",
+    title:
+      "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
     description:
-      "Aims to reconnect overseas Indian youth with their roots and prevent cultural isolation.",
+      "School-based awareness and sensitization program designed to educate adolescents about TB and HIV prevention, symptoms, and the importance of empathy and non-discrimination. ",
     image: initiative4,
     contributeLink: "/contribute",
-    readMoreLink: "/initiatives/my-village-is-my-pilgrimage",
+    readMoreLink: "/initiatives/tb-and-hiv",
   },
 ];
 

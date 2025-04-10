@@ -8,9 +8,10 @@ function OurImpact() {
           Our Impact
         </h2>
       </div>
-      <h2 className="text-xl sm:text-2xl text-center font-semibold mb-12">
+      <h2 className="text-xl lg:text-2xl text-center font-semibold mb-12">
         Till Now We Have Directly Impacted{" "}
-        <span className="text-blue-700 font-bold">3,096,943</span> People
+        <span className="text-blue-700 text-4xl font-bold">3,096,943</span>{" "}
+        People
       </h2>
 
       <div className="max-w-7xl mx-auto space-y-10">
@@ -20,7 +21,6 @@ function OurImpact() {
           <ImpactCard number="2.5M+" label="Beneficiaries Served" />
           <ImpactCard number="19" label="Mega Events Organised" />
           <ImpactCard number="$4M+" label="Financial Support Utilized" />
-
           <ImpactCard number="$75M+" label="In Kind Support Delivered" />
           <ImpactCard
             number="3000+"
@@ -36,7 +36,7 @@ function OurImpact() {
 
 const ImpactCard = ({ number, label }) => {
   return (
-    <div className="bg-blue-50 p-5 rounded-lg shadow hover:scale-105 hover:shadow-md transition-all text-center">
+    <div className="bg-blue-50 p-5 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-all text-center">
       <h2 className="text-3xl font-bold text-blue-800">{number}</h2>
       <h4 className="mt-2 text-gray-700 text-sm sm:text-base">{label}</h4>
     </div>

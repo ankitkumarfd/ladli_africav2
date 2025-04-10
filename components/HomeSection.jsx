@@ -6,7 +6,7 @@ import bg from "@/public/assets/homewall.jpg";
 
 const HomeSection = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden home">
+    <section className="relative w-full h-screen overflow-hidden home my-12">
       /* Background Image */
       <div
         style={{ backgroundImage: `url(${bg.src})` }}
@@ -18,7 +18,7 @@ const HomeSection = () => {
       <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center h-full px-4 text-white">
         <p className="text-xl sm:text-2xl md:text-5xl font-medium">
           Celebrate the spirit of
-          <span className="text-yellow-400 font-semibold">#ThanksGiving,</span>
+          <span className="text-yellow-400 font-semibold"> #ThanksGiving,</span>
         </p>
         <p className="text-xl sm:text-2xl md:text-5xl font-medium">
           by illuminating hope in vulnerable lives!

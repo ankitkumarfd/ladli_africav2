@@ -8,6 +8,65 @@ import aboutImage from "@/public/assets/aboutimage.jpg";
 import ladliimage from "@/public/assets/ladliindia.jpg";
 import Dignitaries from "@/components/Dignitaries";
 import Partners from "@/components/Partners";
+import Photogrid from "@/components/Photogrid";
+
+const gridImages = [
+  {
+    id: 1,
+    bg: "/assets/gridImage/grid1.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-12 sm:col-span-6 md:col-span-8 lg:col-span-4 lg:row-span-3 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 2,
+    bg: "/assets/gridImage/grid2.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-4 sm:col-span-6 md:col-span-3 lg:col-span-3 lg:row-span-2 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 3,
+    bg: "/assets/gridImage/grid3.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-8 sm:col-span-3 md:col-span-5 lg:col-span-3 lg:row-span-2 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 4,
+    bg: "/assets/gridImage/grid4.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-3 sm:col-span-3 md:col-span-4 lg:col-span-3 lg:row-span-3 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 5,
+    bg: "/assets/gridImage/grid1.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-9 sm:col-span-6 md:col-span-4 lg:col-span-3 lg:row-span-2 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 6,
+    bg: "/assets/gridImage/grid2.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-4 sm:col-span-6 md:col-span-3 lg:col-span-4 lg:row-span-2 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+
+  {
+    id: 7,
+    bg: "/assets/gridImage/grid3.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-8 sm:col-span-6 md:col-span-5 lg:col-span-3 lg:row-span-7 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 8,
+    bg: "/assets/gridImage/grid4.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-3 sm:col-span-6 md:col-span-4 lg:col-span-3 lg:row-span-6 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+  {
+    id: 9,
+    bg: "/assets/gridImage/grid1.jpg",
+    classes:
+      "bg-cover bg-center rounded-lg col-span-9 sm:col-span-6 md:col-span-4 lg:col-span-4 lg:row-span-6 hover:scale-105 hover:shadow-lg transition-all duration-300",
+  },
+];
 
 export default function Home() {
   return (
@@ -28,28 +87,10 @@ export default function Home() {
             {/* Left Column - Text */}
             <div className="lg:w-1/2 text-gray-700 space-y-6 text-justify">
               <p>
-                Ladli Foundation USA, a women-led non-profit organization,
-                serves as the United States chapter of Ladli Foundation Trust,
-                India, an emerging international NGO experienced in directly
-                impacting over 2 million beneficiaries through its innovative
-                social initiatives, earning it a special consultative status in
-                the Economic and Social Council since 2020. Founded in 2012 by a
-                slum boy, who began his life as a child laborer, driven by the
-                concern of protecting his sister from evil practices after their
-                parents abandoned them in a crime-ridden slum during his
-                childhood.
+                {`Ladli Foundation Africa, a women-led non-profit organization, serves as the Africa chapter of Ladli Foundation Trust, India, an emerging international NGO experienced in directly impacting over 2 million beneficiaries through its innovative social initiatives, earning it a special consultative status in the Economic and Social Council since 2020. Founded in 2012 by a slum boy, who began his life as a child labourer, driven by the concern of protecting his sister from evil practices after their parents abandoned them in a crime-ridden slum during his childhood.`}
               </p>
               <p className="text-justify">
-                Committed to the advancement of the One Earth-One Health
-                approach, Ladli Foundation USA leads transformative and
-                sustainable social projects. Its focus areas include providing
-                equitable access to healthcare, education, life skills, and
-                mental well-being, particularly targeting vulnerable women and
-                youth. It also aims to raise global awareness by promoting
-                ancient Indian traditional practices for sustainable living
-                worldwide, under the patronage of H.H. Swami Avdheshannad Giri,
-                an International Spiritual Leader, Vedanta Scholar, and the
-                Chief of India's oldest ascetic tradition.
+                {`Committed to the advancement of the One Earth-One Health approach, Ladli Foundation Africa leads transformative and sustainable social projects. Its focus areas include providing equitable access to healthcare, education, life skills, and mental well-being, particularly targeting vulnerable women and youth. It also aims to raise global awareness by promoting ancient Indian traditional practices for sustainable living worldwide, under the patronage of H.H. Swami Avdheshanand Giri, an International Spiritual Leader, Vedanta Scholar, and the Chief of India's oldest ascetic tradition`}
               </p>
               <Link
                 href="/"
@@ -130,6 +171,26 @@ export default function Home() {
       <Dignitaries />
 
       <Partners />
+
+      <Photogrid heading={"Glimpses"} bgImage={gridImages} />
+
+      <section className="bg-gradient-to-r from-blue-800 to-blue-300">
+        <div className="w-full flex flex-col lg:flex-row  justify-between items-center py-12 container mx-auto px-4 mt-12 ">
+          <div className="w-full lg:w-[50%] text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl py-2 text-white">
+              Are you passionate about making a positive impact on{" "}
+              <span className="font-bold text-yellow-300 text-5xl lg:text-6xl">
+                society?
+              </span>
+            </h2>
+          </div>
+          <div>
+            <button className="font-medium bg-gray-100 rounded-full text-base lg:text-xl px-7 lg:px-10 py-4 lg:py-6 hover:bg-pink-600 hover:text-white hover:scale-3d hover:-translate-y-2 transition-all duration-500 cursor-pointer">
+              YES! I WANT TO HELP
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

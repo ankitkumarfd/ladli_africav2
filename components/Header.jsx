@@ -18,11 +18,11 @@ function Header() {
     <header className="bg-white shadow-md fixed top-0 w-full z-50">
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="w-[full]">
+        <Link href="/" className="w-[20%]">
           <Image
             src={ladlilogo}
             alt="Ladli Foundation Logo"
-            className="w-[50%] h-auto"
+            className="w-[100%] h-auto"
           />
         </Link>
 
@@ -76,7 +76,7 @@ function Header() {
       "text-gray-700 hover:bg-pink-600 hover:text-white transition-all duration-300 rounded-full px-4 py-2 block text-left";
     const dropdownWrapper = "relative group";
     const dropdownMenu =
-      "absolute left-0 mt-1 hidden group-hover:flex flex-col bg-white shadow-md border border-gray-100 rounded-md z-10 min-w-[200px]";
+      "absolute left-0 mt-1 hidden group-hover:flex flex-col bg-white shadow-md border border-gray-100 rounded-md z-10 min-w-[300px]";
     const mobileDropdownWrapper = "space-y-1";
     const mobileDropdownMenu = "pl-4 space-y-1";
 
@@ -100,33 +100,22 @@ function Header() {
         label: "Initiatives",
         dropdown: [
           {
-            label: "Supporting GBV Survivors",
-            href: "/initiatives/supporting-gbv-survivors",
+            label:
+              "Empowering Girls through Menstrual Hygiene Management (MHM)",
+            href: "/initiatives/mhm",
           },
           {
-            label: "Mental Health for Drug Prevention",
-            href: "/initiatives/mental-health-for-drug-prevention",
+            label: "Advancing Sexual & Reproductive Health For School Girls",
+            href: "/initiatives/advancing-srh",
           },
           {
-            label: "Adopt A Girl Child",
-            href: "/initiatives/adopt-a-girl-child-to-empower-her",
-          },
-          { label: "Street to School", href: "/initiatives/street-to-school" },
-          {
-            label: "Health & Hygiene",
-            href: "/initiatives/health-and-hygiene-for-slum-women",
+            label: "Strengthening WASH Infrastructure & Awareness in Schools",
+            href: "/initiatives/wash-awareness",
           },
           {
-            label: "Social Security",
-            href: "/initiatives/social-security-for-vulnerable-women",
-          },
-          {
-            label: "My Village is My Pilgrimage",
-            href: "/initiatives/my-village-is-my-pilgrimage",
-          },
-          {
-            label: "Bridging the Digital Divide",
-            href: "/initiatives/bridging-the-digital-divide-in-education",
+            label:
+              "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
+            href: "/initiatives/tb-and-hiv",
           },
         ],
       },
