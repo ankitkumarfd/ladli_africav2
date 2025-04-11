@@ -7,19 +7,20 @@ import {
   TypographyP,
 } from "@/components/custom/Typhographies";
 import Image from "next/image";
-import kids from "@/public/assets/kids1.jpg";
+import srh1 from "@/public/assets/initiatives/advancing-srh/srh1.jpg";
+import bg_srh from "@/public/assets/bg/bg_srh.webp";
 
 function page() {
   return (
     <main className="flex-grow ">
-      <div className="relative w-full h-[70vh] overflow-hidden home mb-12">
+      <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
         /* Background Image */
         <div
-          style={{ backgroundImage: `url(${bg.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[70vh]"
+          style={{ backgroundImage: `url(${bg_srh.src})` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
         ></div>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-0 h-[70vh]" />
+        {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
       </div>
 
       <section className="container mx-auto px-4 my-5">
@@ -161,7 +162,7 @@ function page() {
             <div className=" ">
               <Image
                 priority
-                src={kids}
+                src={srh1}
                 alt="kids"
                 width={800}
                 height={600}

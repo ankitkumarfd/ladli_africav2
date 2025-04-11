@@ -11,12 +11,16 @@ import initiative2 from "@/public/assets/initiatives/initiative2.jpg";
 import initiative3 from "@/public/assets/initiatives/initiative3.jpg";
 import initiative4 from "@/public/assets/initiatives/initiative4.jpg";
 
+import card_mhm from "@/public/assets/cards/card_mhm.png";
+import card_wash from "@/public/assets/cards/card_wash.jpg";
+import card_hiv from "@/public/assets/cards/card_hiv.jpg";
+
 const initiativesData = [
   {
     title: "Empowering Girls through Menstrual Hygiene Management (MHM)",
     description:
       "The initiative aims to empower adolescent girls with knowledge, resources, and a supportive environment to manage menstruation with dignity and confidence.",
-    image: initiative1,
+    image: card_mhm,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/mhm",
   },
@@ -32,7 +36,7 @@ const initiativesData = [
     title: "Strengthening WASH Infrastructure & Awareness in Schools",
     description:
       "Support to build inclusive, sustainable WASH infrastructure in schools while fostering hygiene awareness and behavioural change among students, teachers, and communities",
-    image: initiative3,
+    image: card_wash,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/wash-awareness",
   },
@@ -41,7 +45,7 @@ const initiativesData = [
       "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
     description:
       "School-based awareness and sensitization program designed to educate adolescents about TB and HIV prevention, symptoms, and the importance of empathy and non-discrimination. ",
-    image: initiative4,
+    image: card_hiv,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/tb-and-hiv",
   },
@@ -49,7 +53,7 @@ const initiativesData = [
     title: "Empowering Girls through Menstrual Hygiene Management (MHM)",
     description:
       "The initiative aims to empower adolescent girls with knowledge, resources, and a supportive environment to manage menstruation with dignity and confidence.",
-    image: initiative1,
+    image: card_mhm,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/mhm",
   },
@@ -65,7 +69,7 @@ const initiativesData = [
     title: "Strengthening WASH Infrastructure & Awareness in Schools",
     description:
       "Support to build inclusive, sustainable WASH infrastructure in schools while fostering hygiene awareness and behavioural change among students, teachers, and communities",
-    image: initiative3,
+    image: card_wash,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/wash-awareness",
   },
@@ -74,7 +78,7 @@ const initiativesData = [
       "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
     description:
       "School-based awareness and sensitization program designed to educate adolescents about TB and HIV prevention, symptoms, and the importance of empathy and non-discrimination. ",
-    image: initiative4,
+    image: card_hiv,
     contributeLink: "/contribute",
     readMoreLink: "/initiatives/tb-and-hiv",
   },
