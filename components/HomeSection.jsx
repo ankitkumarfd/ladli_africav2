@@ -2,7 +2,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
 import Link from "next/link";
-import bg from "@/public/assets/homewall.jpg";
+import bg from "@/public/assets/homewall.png";
 
 const HomeSection = () => {
   return (
@@ -13,9 +13,9 @@ const HomeSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full"
       ></div>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
+      {/* <div className="absolute inset-0 bg-black/10 z-0" /> */}
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center h-full px-4 text-white">
+      {/* <div className="relative z-10 flex flex-col items-center justify-center gap-2 text-center h-full px-4 text-white">
         <p className="text-xl sm:text-2xl md:text-5xl font-medium">
           Celebrate the spirit of
           <span className="text-yellow-400 font-semibold"> #ThanksGiving,</span>
@@ -34,7 +34,7 @@ const HomeSection = () => {
         >
           Give Now
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

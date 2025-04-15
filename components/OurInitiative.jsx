@@ -88,7 +88,10 @@ export default function InitiativesSlider() {
   return (
     <div className="w-full flex flex-col justify-center items-center py-12 bg-gray-100">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent">
+        <h2
+          data-aos="zoom-in"
+          className="text-4xl font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent"
+        >
           Our Initiatives
         </h2>
         <p className="text-lg mt-4 text-gray-700">

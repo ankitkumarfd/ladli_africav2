@@ -2,9 +2,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
-import "swiper/css";
 import "swiper/css/effect-coverflow";
-import Link from "next/link";
+import "swiper/css";
 import Image from "next/image";
 import initiative1 from "@/public/assets/initiatives/initiative1.jpg";
 import initiative2 from "@/public/assets/initiatives/initiative2.jpg";
@@ -209,7 +208,10 @@ function Dignitaries() {
   return (
     <div className="w-full flex flex-col justify-center items-center py-12 bg-gray-100">
       <div className="text-center mb-10">
-        <h2 className="text-4xl py-2 font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent">
+        <h2
+          data-aos="zoom-in"
+          className="text-4xl py-2 font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent"
+        >
           Dignitaries Testimonials
         </h2>
         <p className="text-lg mt-4 text-gray-700">
@@ -222,7 +224,7 @@ function Dignitaries() {
 
       <Swiper
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -245,7 +247,7 @@ function Dignitaries() {
             spaceBetween: 30,
           },
         }}
-        modules={[Autoplay]}
+        // modules={[Autoplay]}
         className="w-full h-full px-4 lg:px-0"
       >
         {dignitariesData.map((item, index) => (

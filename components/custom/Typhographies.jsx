@@ -11,7 +11,7 @@ export function TypographyH1({ children, className }) {
 export function TypographyH2({ children, className }) {
   return (
     <h2
-      className={`scroll-m-20 text-gray-800 pb-2 text-3xl font-bold uppercase ${className}`}
+      className={`scroll-m-20 text-gray-800 pb-2 text-3xl font-bold ${className}`}
     >
       {children}
     </h2>

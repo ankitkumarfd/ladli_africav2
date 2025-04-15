@@ -115,7 +115,10 @@ function Partners() {
     <div>
       <section className="container mx-auto px-4 my-12">
         <div className="text-center mb-10">
-          <h2 className="text-4xl py-2 font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent">
+          <h2
+            data-aos="zoom-in"
+            className="text-4xl py-2 font-bold bg-gradient-to-r from-blue-300 to-blue-800 bg-clip-text text-transparent"
+          >
             Our Partners, Our Strength
           </h2>
         </div>
@@ -126,7 +129,7 @@ function Partners() {
               Govt. & PSU Partners
             </h3>
           </div>
-          <div>
+          <div data-aos="zoom-out">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
               {govtPartners.map((partner, index) => (
                 <div key={index} className="flex justify-center items-center">
@@ -149,7 +152,7 @@ function Partners() {
               International Agencies & Organizational Partners
             </h3>
           </div>
-          <div>
+          <div data-aos="zoom-out">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-4">
               {internationalPartners.map((partner, index) => (
                 <div key={index} className="flex justify-center items-center">
@@ -172,7 +175,7 @@ function Partners() {
               Corporates
             </h3>
           </div>
-          <div>
+          <div data-aos="zoom-out">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-4">
               {corporatePartners.map((partner, index) => (
                 <div key={index} className="flex justify-center items-center ">

@@ -4,6 +4,69 @@ import Link from "next/link";
 import ladlilogo from "@/public/ladlilogo.png";
 import Image from "next/image";
 
+const menu = [
+  { label: "Home", href: "/" },
+  {
+    label: "About",
+    dropdown: [
+      { label: "About Us", href: "/about/about-us" },
+      // { label: "Our Approach", href: "/our-approach" },
+      { label: "Our Founder", href: "/about/our-founder" },
+      { label: "Executive Board", href: "/about/executive-board" },
+      // {
+      //   label: "International Advisory Board",
+      //   href: "/international-advisory-board",
+      // },
+    ],
+  },
+  {
+    label: "Initiatives",
+    dropdown: [
+      {
+        label: "Empowering Girls through Menstrual Hygiene Management (MHM)",
+        href: "/initiatives/mhm",
+      },
+      {
+        label: "Advancing Sexual & Reproductive Health For School Girls",
+        href: "/initiatives/advancing-srh",
+      },
+      {
+        label: "Strengthening WASH Infrastructure & Awareness in Schools",
+        href: "/initiatives/wash-awareness",
+      },
+      {
+        label:
+          "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
+        href: "/initiatives/tb-and-hiv",
+      },
+    ],
+  },
+  // {
+  //   label: "Activities",
+  //   dropdown: [
+  //     { label: "Field Activities", href: "/activities/field-activities" },
+  //     { label: "Events", href: "/activities/events" },
+  //     { label: "Conferences", href: "/activities/conferences" },
+  //     {
+  //       label: "Blogs & Article",
+  //       href: "https://blog.ladlifoundation.org/",
+  //     },
+  //     { label: "Press & Media", href: "/press" },
+  //     { label: "Gallery", href: "/gallery" },
+  //   ],
+  // },
+  // {
+  //   label: "Get Involved",
+  //   dropdown: [
+  //     { label: "Voltour", href: "/get-involved#voltour" },
+  //     { label: "Internship", href: "/get-involved#internship" },
+  //     { label: "Fellowships", href: "/get-involved#fellowship" },
+  //     { label: "Researcher", href: "/get-involved#researcher" },
+  //     { label: "CSR Partner", href: "/get-involved#csr" },
+  //   ],
+  // },
+];
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null); // ✅ FIXED
@@ -80,71 +143,6 @@ function Header() {
     const mobileDropdownWrapper = "space-y-1";
     const mobileDropdownMenu = "pl-4 space-y-1";
 
-    const menu = [
-      { label: "Home", href: "/" },
-      {
-        label: "About Us",
-        dropdown: [
-          { label: "Our Mission", href: "/mission" },
-          { label: "About the Organisation", href: "/about-us" },
-          { label: "Our Approach", href: "/our-approach" },
-          { label: "Our Founder", href: "/founder" },
-          { label: "Executive Board", href: "/executive-board" },
-          {
-            label: "International Advisory Board",
-            href: "/international-advisory-board",
-          },
-        ],
-      },
-      {
-        label: "Initiatives",
-        dropdown: [
-          {
-            label:
-              "Empowering Girls through Menstrual Hygiene Management (MHM)",
-            href: "/initiatives/mhm",
-          },
-          {
-            label: "Advancing Sexual & Reproductive Health For School Girls",
-            href: "/initiatives/advancing-srh",
-          },
-          {
-            label: "Strengthening WASH Infrastructure & Awareness in Schools",
-            href: "/initiatives/wash-awareness",
-          },
-          {
-            label:
-              "Combating TB & HIV through Awareness and Early Detection for Adolescents in Schools",
-            href: "/initiatives/tb-and-hiv",
-          },
-        ],
-      },
-      {
-        label: "Activities",
-        dropdown: [
-          { label: "Field Activities", href: "/activities/field-activities" },
-          { label: "Events", href: "/activities/events" },
-          { label: "Conferences", href: "/activities/conferences" },
-          {
-            label: "Blogs & Article",
-            href: "https://blog.ladlifoundation.org/",
-          },
-          { label: "Press & Media", href: "/press" },
-          { label: "Gallery", href: "/gallery" },
-        ],
-      },
-      {
-        label: "Get Involved",
-        dropdown: [
-          { label: "Voltour", href: "/get-involved#voltour" },
-          { label: "Internship", href: "/get-involved#internship" },
-          { label: "Fellowships", href: "/get-involved#fellowship" },
-          { label: "Researcher", href: "/get-involved#researcher" },
-          { label: "CSR Partner", href: "/get-involved#csr" },
-        ],
-      },
-    ];
-
     return (
       <>
         {menu.map((item, index) =>
@@ -189,7 +187,7 @@ function Header() {
         )}
         <Link
           href="https://www.every.org/ladlifoundation-usa?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo#/donate"
-          className="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition-all duration-300 block text-center"
+          className="bg-pink-600 text-white px-5 py-3 rounded-full hover:bg-pink-700 transition-all duration-300 block text-center"
         >
           Contribute
         </Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "@/public/assets/homewall.jpg";
+import bg from "@/public/assets/homewall.png";
 import {
   TypographyH3,
   TypographyH2,
