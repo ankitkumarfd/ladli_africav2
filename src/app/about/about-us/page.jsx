@@ -3,6 +3,7 @@ import bg from "@/public/assets/homewall.png";
 import {
   TypographyH1,
   TypographyH2,
+  TypographyH3,
   TypographyH4,
   TypographyP,
 } from "@/components/custom/Typhographies";
@@ -74,11 +75,15 @@ function page() {
         {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
       </div>
 
-      <section className="py-8">
+      <section className="">
+        <div className="text-center">
+          <TypographyH1 className="">About Us</TypographyH1>
+        </div>
+
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:items-center">
             <div data-aos="fade-right" className="text-left">
-              <TypographyH2 className="text-4xl mb-4 font-bold bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+              <TypographyH2 className=" mb-4 font-bold text-blue-700 ">
                 Our Mission
               </TypographyH2>
               <TypographyP className="text-justify">
@@ -128,7 +133,7 @@ function page() {
             </div>
 
             <div data-aos="fade-right" className="text-left">
-              <TypographyH2 className="text-4xl mb-4 font-bold bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+              <TypographyH2 className=" mb-4 font-bold text-blue-700 ">
                 Who We Are
               </TypographyH2>
               <ul className="list-disc mt-4 text-left">
@@ -150,9 +155,9 @@ function page() {
               <Accordion type="single" collapsible className="mb-6">
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="font-semibold text-lg hover:no-underline">
-                    <TypographyH4 className="bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+                    <TypographyH3 className="text-blue-700">
                       {`Our Impact`}
-                    </TypographyH4>
+                    </TypographyH3>
                   </AccordionTrigger>
                   <AccordionContent>
                     <TypographyP>{`With a remarkable impact on over 2.5 million direct beneficiaries, Ladli Foundation has been recognized for its outstanding contributions. Notably, the foundation's recent achievements include enabling digital education access for more than 157,000 marginalized students, yielding a remarkable impact valued at INR 600 Crore (approximately 75 million USD), all achieved independently without any external financial aid or grants. Furthermore, As an Exclusive NGO Partner with Govt of Delhi, the Organization is Implementing Its Social Innovations for creating sustainable solution for eradicating malnutrition among 8,00,000 marginalized students in the city.`}</TypographyP>
@@ -161,9 +166,9 @@ function page() {
 
                 <AccordionItem value="item-2">
                   <AccordionTrigger className="font-semibold text-lg hover:no-underline">
-                    <TypographyH4 className="bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+                    <TypographyH3 className="text-blue-700">
                       {`International Reach`}
-                    </TypographyH4>
+                    </TypographyH3>
                   </AccordionTrigger>
                   <AccordionContent>
                     <TypographyP>{`Our vision knows no boundaries. Beyond the Indian shores, our international wing - Ladli Foundation USA - a 501(C)(3) non-profit corporation, stands shoulder to shoulder with the United Nations Sustainable Development Goals. Our commitment echoes in our initiatives, and our impact resounds across borders.`}</TypographyP>
@@ -172,9 +177,9 @@ function page() {
 
                 <AccordionItem value="item-3">
                   <AccordionTrigger className="font-semibold text-lg hover:no-underline">
-                    <TypographyH4 className="bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
+                    <TypographyH3 className="text-blue-700">
                       {`INCEPTION- LADLI FOUNDATION, INDIA`}
-                    </TypographyH4>
+                    </TypographyH3>
                   </AccordionTrigger>
                   <AccordionContent>
                     <TypographyP>{`Driven by concerns of health, education & equality for vulnerable women as an integral and critical dimension of human rights, Ladli Foundation became a reality in 2012 as a grassroots social catalyst. It was founded by Devendra Kumar, whose incredible journey began as a child laborer in a poverty- stricken environment. Where he faced numerous hardships and atrocities during his orphaned and challenging childhood. Born in a crime-prone slum, he endured abandonment by his parents, who left him with his three-day-old infant sister when he was just two years old. Despite these adversities, Devendra's indomitable spirit and resilience led him to find solace and purpose in serving others. Driven by his determination to protect his sister from child marriage and dowry, Devendra founded the Ladli Foundation with the noble mission of uplifting the oppressed and disadvantaged. His personal experiences as a child laborer and his encounters with delinquents and drug addicts further fueled his commitment to making a positive impact in the lives of those facing similar challenges.`}</TypographyP>

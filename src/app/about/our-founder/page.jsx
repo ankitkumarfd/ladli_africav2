@@ -27,7 +27,10 @@ function page() {
           {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
         </div>
 
-        <section className="py-8">
+        <section className="">
+          <div className="text-center mb-8">
+            <TypographyH1 className="">Our Founder</TypographyH1>
+          </div>
           <div className="container mx-auto px-4">
             <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:items-center">
               <div data-aos="fade-right" className="text-justify">

@@ -80,25 +80,25 @@ export default function Home() {
             {/* Section Heading */}
             <div data-aos="zoom-in" className="text-center mb-12">
               <h2 className="text-4xl font-bold bg-gradient-to-br from-blue-300 to-blue-800 bg-clip-text text-transparent">
-                About Ladli AFRICA
+                ABOUT LADLI AFRICA
               </h2>
             </div>
 
             {/* Two Column Layout */}
-            <div className="flex flex-col lg:flex-row gap-10 items-center">
+            <div className="flex flex-col lg:flex-row gap-10">
               {/* Left Column - Text */}
               <div
                 data-aos="fade-right"
                 className="lg:w-1/2 text-gray-700 space-y-6 text-justify"
               >
                 <p>
-                  {`Ladli Foundation Africa, a women-led non-profit organization, serves as the Africa chapter of Ladli Foundation Trust, India, an emerging international NGO experienced in directly impacting over 2 million beneficiaries through its innovative social initiatives, earning it a special consultative status in the Economic and Social Council since 2020. Founded in 2012 by a slum boy, who began his life as a child labourer, driven by the concern of protecting his sister from evil practices after their parents abandoned them in a crime-ridden slum during his childhood.`}
+                  {`Ladli Foundation Africa – South Africa is a dedicated wing of the internationally recognized Ladli Foundation Trust, India, an emerging international NGO experienced in directly impacting over 2 million beneficiaries through its innovative social initiatives, earning it a special consultative status in the Economic and Social Council since 2020. Founded in 2012 by a slum boy, who began his life as a child labourer, driven by the concern of protecting his sister from evil practices after their parents abandoned them in a crime-ridden slum during his childhood. We work at the intersection of public health, youth engagement, gender equality, and legal awareness, aiming to break cycles of poverty, inequality, and marginalization that disproportionately affect women, children, and adolescents in underserved communities.`}
                 </p>
                 <p className="text-justify">
-                  {`Committed to the advancement of the One Earth-One Health approach, Ladli Foundation Africa leads transformative and sustainable social projects. Its focus areas include providing equitable access to healthcare, education, life skills, and mental well-being, particularly targeting vulnerable women and youth. It also aims to raise global awareness by promoting ancient Indian traditional practices for sustainable living worldwide, under the patronage of H.H. Swami Avdheshanand Giri, an International Spiritual Leader, Vedanta Scholar, and the Chief of India's oldest ascetic tradition`}
+                  {`Our mission is to uplift underserved South African communities through health education and empowerment initiatives, with a strong focus on youth. To create sustainable grassroots impact. As an extension of the internationally acclaimed Ladli Foundation, we are committed to advancing the rights, dignity, and well-being of women and children across Africa.`}
                 </p>
                 <Link
-                  href="/"
+                  href="/know-more"
                   className="text-pink-600 font-semibold hover:underline text-lg inline-block"
                 >
                   Know more &rarr;
@@ -106,10 +106,7 @@ export default function Home() {
               </div>
 
               {/* Right Column - Image */}
-              <div
-                data-aos="fade-left"
-                className="lg:w-1/2 hover:shadow-2xl hover:shadow-blue-300 hover:-translate-y-3 transition-all duration-300 "
-              >
+              <div data-aos="fade-left" className="lg:w-1/2 ">
                 <Image
                   src={aboutImage}
                   alt="About Ladli Africa"
