@@ -1,12 +1,11 @@
 "use client";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React from "react";
-import Link from "next/link";
 import bg from "@/public/assets/homewall.png";
 
 const HomeSection = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden home my-12">
+    <section className="relative w-full h-screen ">
       /* Background Image */
       <div
         style={{ backgroundImage: `url(${bg.src})` }}

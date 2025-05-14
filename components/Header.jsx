@@ -78,10 +78,10 @@ function Header() {
   };
 
   return (
-    <header className="bg-white shadow-md fixed top-0 w-full z-50">
-      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="bg-white shadow-md fixed top-0 w-full z-50 ">
+      <nav className="py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="w-[20%]">
+        <Link href="/" className="max-w-[200px] w-full">
           <Image
             src={ladlilogo}
             alt="Ladli Foundation Logo"
