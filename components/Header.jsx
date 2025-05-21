@@ -186,7 +186,7 @@ function Header() {
           )
         )}
         <Link
-          href="https://www.every.org/ladlifoundation-usa?utm_campaign=donate-link&method=card%2Cbank%2Cpaypal%2Cpay%2Cvenmo#/donate"
+          href="/donate"
           className="bg-pink-600 text-white px-5 py-3 rounded-full hover:bg-pink-700 transition-all duration-300 block text-center"
         >
           Contribute

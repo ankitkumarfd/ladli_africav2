@@ -5,7 +5,7 @@ import bg from "@/public/assets/homewall.png";
 
 const HomeSection = () => {
   return (
-    <section className="relative w-full h-screen ">
+    <section className="relative w-full h-[50vh] lg:h-[90vh]">
       /* Background Image */
       <div
         style={{ backgroundImage: `url(${bg.src})` }}
