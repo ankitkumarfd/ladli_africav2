@@ -9,7 +9,7 @@ const HomeSection = () => {
       /* Background Image */
       <div
         style={{ backgroundImage: `url(${bg.src})` }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-full w-full"
       ></div>
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/10 z-0" /> */}

@@ -10,9 +10,9 @@ function OurImpact() {
             Our Impact
           </h2>
         </div>
-        <h2 className="text-xl lg:text-2xl text-center font-semibold mb-12">
+        <h2 className="text-xl lg:text-2xl text-center font-medium mb-12">
           Till Now We Have Directly Impacted{" "}
-          <span className="text-blue-700 text-4xl font-bold">3,096,943</span>{" "}
+          <span className="text-blue-700 text-3xl font-bold">3,096,943</span>{" "}
           People
         </h2>
 

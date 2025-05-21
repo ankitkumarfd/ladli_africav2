@@ -24,7 +24,7 @@ function Footer() {
           </div>
 
           <div className=" w-[18rem] flex flex-col gap-4">
-            <h2 className="text-blue-700 font-semibold text-base">
+            <h2 className="text-[#2a67b8] font-semibold text-base">
               IMPORTANT LINKS
             </h2>
             <ul className="space-y-2 text-gray-600 ">
@@ -41,7 +41,7 @@ function Footer() {
           </div>
 
           <div className="w-[18rem] flex flex-col gap-4">
-            <h2 className="text-blue-700 font-semibold text-base">
+            <h2 className="text-[#2a67b8] font-semibold text-base">
               OFFICE DETAILS
             </h2>
             <ul className="space-y-2 text-gray-600 ">
