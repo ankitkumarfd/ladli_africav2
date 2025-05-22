@@ -1,12 +1,11 @@
-import React from "react";
-import ladlilogo from "@/public/ladlilogo.png";
-import Image from "next/image";
-import { IoLocationSharp } from "react-icons/io5";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoInstagram } from "react-icons/io5";
-import { FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
+import React from 'react';
+import ladlilogo from '@/public/ladlilogo.png';
+import Image from 'next/image';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import { FaFacebook } from 'react-icons/fa';
+import { IoLogoInstagram } from 'react-icons/io5';
+import { FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -29,7 +28,7 @@ function Footer() {
             </h2>
             <ul className="space-y-2 text-gray-600 ">
               <li className="hover:underline hover:underline-offset-2 transition-all duration-300">
-                <Link href="">About Us</Link>
+                <Link href="/about/about-us">About Us</Link>
               </li>
               <li className="hover:underline hover:underline-offset-2 transition-all duration-300">
                 <Link href="">Privacy Policy</Link>

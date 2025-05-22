@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState, useRef } from "react";
-import bg from "@/public/assets/homewall.png";
-import AnimateOnScroll from "@/components/common/AOS/AnimateOnScroll";
-import { TypographyH1, TypographyP } from "@/components/custom/Typhographies";
+import { useState, useRef } from 'react';
+import bg from '@/public/assets/homewall.png';
+import AnimateOnScroll from '@/components/common/AOS/AnimateOnScroll';
+import { TypographyH1, TypographyP } from '@/components/custom/Typhographies';
 
 const Amounts = [500, 1000, 1500, 2000, 2500];
 
@@ -19,12 +19,12 @@ function page() {
     // Ensure minimum amount
     if (amount < 5) {
       e.preventDefault();
-      alert("Minimum donation is 5.00");
+      alert('Minimum donation is 5.00');
       return;
     }
 
     // Set the correct value for amount input before submitting
-    form["amount"].value = amount.toFixed(2);
+    form['amount'].value = amount.toFixed(2);
   };
 
   return (
@@ -37,7 +37,7 @@ function page() {
           ></div>
         </div>
 
-        <section className="">
+        <section className="mb-10">
           <div className="text-center mb-8">
             <TypographyH1 className="">Donate Now</TypographyH1>
           </div>
@@ -60,12 +60,15 @@ function page() {
                   action="https://payment.payfast.io/eng/process"
                   method="post"
                 >
+                  <h4 className="text-sm font-semibold text-gray-600 my-3 underline">
+                    Choose Amount to Donate
+                  </h4>
                   <div className="flex gap-2 justify-between items-center mb-5">
                     {Amounts.map((amt, idx) => (
                       <div
                         key={idx}
                         className={`border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer ${
-                          amount === amt ? "bg-blue-500 text-white" : ""
+                          amount === amt ? 'bg-blue-500 text-white' : ''
                         }`}
                         onClick={(e) => {
                           setAmount(amt);
@@ -104,6 +107,9 @@ function page() {
                   />
 
                   <div className="mb-4">
+                    <p className="text-sm font-semibold text-gray-600 my-3 underline">
+                      Enter a custom amount:-
+                    </p>
                     <label
                       htmlFor="amount"
                       className="block text-gray-700 text-sm font-bold mb-2"
@@ -126,7 +132,7 @@ function page() {
                     />
                   </div>
 
-                  <div style={{ textAlign: "center", marginTop: "20px" }}>
+                  <div style={{ textAlign: 'center', marginTop: '20px' }}>
                     <input
                       type="image"
                       src="https://my.payfast.io/images/buttons/DonateNow/Primary-Large-DonateNow.png"

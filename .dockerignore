@@ -8,3 +8,8 @@ node_modules
 
 # Ignore .next build folder
 .next
+
+
+# docker build -t webladli/ladliafrica:0.0.2 .
+# docker container run -it -p 3000:3000 webladli/ladliafrica:0.0.2
+# docker push webladli/ladliafrica:0.0.2
