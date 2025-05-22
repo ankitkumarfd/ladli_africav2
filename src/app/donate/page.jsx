@@ -1,13 +1,16 @@
-'use client';
+"use client";
 
-import { useState, useRef } from 'react';
-import bg from '@/public/assets/homewall.png';
-import AnimateOnScroll from '@/components/common/AOS/AnimateOnScroll';
-import { TypographyH1, TypographyP } from '@/components/custom/Typhographies';
+import { useState, useRef } from "react";
+import bg from "@/public/assets/homewall.png";
+import AnimateOnScroll from "@/components/common/AOS/AnimateOnScroll";
+import { TypographyH1, TypographyP } from "@/components/custom/Typhographies";
+
+const Amounts = [500, 1000, 1500, 2000, 2500];
 
 function page() {
   const formRef = useRef(null);
   const [amount, setAmount] = useState(500.0);
+  const [isSelected, setIsSelected] = useState(false);
 
   const handleSubmit = (e) => {
     const form = formRef.current;
@@ -16,12 +19,12 @@ function page() {
     // Ensure minimum amount
     if (amount < 5) {
       e.preventDefault();
-      alert('Minimum donation is 5.00');
+      alert("Minimum donation is 5.00");
       return;
     }
 
     // Set the correct value for amount input before submitting
-    form['amount'].value = amount.toFixed(2);
+    form["amount"].value = amount.toFixed(2);
   };
 
   return (
@@ -58,36 +61,20 @@ function page() {
                   method="post"
                 >
                   <div className="flex gap-2 justify-between items-center mb-5">
-                    <div
-                      className="border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer"
-                      onClick={(e) => setAmount(500)}
-                    >
-                      <span>500</span>
-                    </div>
-                    <div
-                      className="border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer"
-                      onClick={(e) => setAmount(1000)}
-                    >
-                      <span>1000</span>
-                    </div>
-                    <div
-                      className="border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer"
-                      onClick={(e) => setAmount(1500)}
-                    >
-                      <span>1500</span>
-                    </div>
-                    <div
-                      className="border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer"
-                      onClick={(e) => setAmount(2000)}
-                    >
-                      <span>2000</span>
-                    </div>
-                    <div
-                      className="border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer"
-                      onClick={(e) => setAmount(2500)}
-                    >
-                      <span>2500</span>
-                    </div>
+                    {Amounts.map((amt, idx) => (
+                      <div
+                        key={idx}
+                        className={`border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer ${
+                          amount === amt ? "bg-blue-500 text-white" : ""
+                        }`}
+                        onClick={(e) => {
+                          setAmount(amt);
+                          setIsSelected(true);
+                        }}
+                      >
+                        <span>{amt}</span>
+                      </div>
+                    ))}
                   </div>
 
                   <input type="hidden" name="cmd" value="_paynow" required />
@@ -139,7 +126,7 @@ function page() {
                     />
                   </div>
 
-                  <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                  <div style={{ textAlign: "center", marginTop: "20px" }}>
                     <input
                       type="image"
                       src="https://my.payfast.io/images/buttons/DonateNow/Primary-Large-DonateNow.png"
