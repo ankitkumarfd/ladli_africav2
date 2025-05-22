@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 
 export default function PayFastForm() {
   const formRef = useRef(null);
-  const [amount, setAmount] = useState(5.0); // Default amount
+  const [amount, setAmount] = useState(500.0); // Default amount
 
   const handleSubmit = (e) => {
     const form = formRef.current;
