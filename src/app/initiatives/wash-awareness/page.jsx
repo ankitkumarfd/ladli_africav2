@@ -1,26 +1,29 @@
-import React from "react";
-import bg from "@/public/assets/homewall.png";
+import React from 'react';
+import bg from '@/public/assets/homewall.png';
 import {
   TypographyH3,
   TypographyH2,
   TypographyH1,
   TypographyP,
-} from "@/components/custom/Typhographies";
-import Image from "next/image";
-import wash1 from "@/public/assets/initiatives/wash-awareness/wash1.jpg";
-import bg_wash from "@/public/assets/bg/bg_wash.jpg";
+} from '@/components/custom/Typhographies';
+import Image from 'next/image';
+import wash1 from '@/public/assets/initiatives/wash-awareness/wash1.jpg';
+import bg_wash from '@/public/assets/bg/bg_wash.jpg';
 
 function page() {
   return (
     <main className="flex-grow ">
       <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-        /* Background Image */
-        <div
-          style={{ backgroundImage: `url(${bg_wash.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-        ></div>
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={bg_wash}
+            alt="WASH initiative background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
       </div>
 
       <section className="container mx-auto px-4 my-5">
@@ -143,24 +146,24 @@ function page() {
               <ul className="list-decimal space-y-3 mt-2">
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Successfully implemented `}{" "}
-                    <span className="font-semibold">{`WASH and MHM programs in 400+ schools`}</span>{" "}
+                    {`Successfully implemented `}{' '}
+                    <span className="font-semibold">{`WASH and MHM programs in 400+ schools`}</span>{' '}
                     {`across India`}
                   </TypographyP>
                 </li>
 
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Partnered with`}{" "}
-                    <span className="font-semibold">{`municipal corporations, police departments, and school boards`}</span>{" "}
+                    {`Partnered with`}{' '}
+                    <span className="font-semibold">{`municipal corporations, police departments, and school boards`}</span>{' '}
                     {`for large-scale hygiene campaigns`}
                   </TypographyP>
                 </li>
 
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Created model WASH spaces that improved`}{" "}
-                    <span className="font-semibold">{`attendance of girl students by up to 70%`}</span>{" "}
+                    {`Created model WASH spaces that improved`}{' '}
+                    <span className="font-semibold">{`attendance of girl students by up to 70%`}</span>{' '}
                   </TypographyP>
                 </li>
               </ul>
@@ -172,7 +175,7 @@ function page() {
               <Image
                 priority
                 src={wash1}
-                alt="kids"
+                alt="Children learning about hygiene"
                 width={800}
                 height={600}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -1,26 +1,27 @@
-import React from "react";
-import bg from "@/public/assets/homewall.png";
+import React from 'react';
 import {
   TypographyH3,
-  TypographyH2,
   TypographyH1,
   TypographyP,
-} from "@/components/custom/Typhographies";
-import Image from "next/image";
-import srh1 from "@/public/assets/initiatives/advancing-srh/srh1.jpg";
-import bg_srh from "@/public/assets/bg/bg_srh.webp";
+} from '@/components/custom/Typhographies';
+import Image from 'next/image';
+import srh1 from '@/public/assets/initiatives/advancing-srh/srh1.jpg';
+import bg_srh from '@/public/assets/bg/bg_srh.webp';
 
 function page() {
   return (
     <main className="flex-grow ">
       <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-        /* Background Image */
-        <div
-          style={{ backgroundImage: `url(${bg_srh.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-        ></div>
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={bg_srh}
+            alt="SRH initiative background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
       </div>
 
       <section className="container mx-auto px-4 my-5">
@@ -143,8 +144,8 @@ function page() {
               <ul className="list-decimal space-y-3 mt-2">
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Reached`}{" "}
-                    <span className="font-semibold">{`over 5 lakh adolescent girls`}</span>{" "}
+                    {`Reached`}{' '}
+                    <span className="font-semibold">{`over 5 lakh adolescent girls`}</span>{' '}
                     {`with gender and health education in high-risk areas`}
                   </TypographyP>
                 </li>

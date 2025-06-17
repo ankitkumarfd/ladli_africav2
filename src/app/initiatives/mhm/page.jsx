@@ -1,25 +1,26 @@
-import React from "react";
-import bg_mhm from "@/public/assets/bg/bg_mhm2.jpeg";
+import bg_mhm from '@/public/assets/bg/bg_mhm2.jpeg';
 import {
   TypographyH3,
-  TypographyH2,
   TypographyH1,
   TypographyP,
-} from "@/components/custom/Typhographies";
-import Image from "next/image";
-import mhm1 from "@/public/assets/initiatives/mhm/mhm2.webp";
+} from '@/components/custom/Typhographies';
+import Image from 'next/image';
+import mhm1 from '@/public/assets/initiatives/mhm/mhm2.webp';
 
 function page() {
   return (
     <main className="flex-grow ">
       <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-        /* Background Image */
-        <div
-          style={{ backgroundImage: `url(${bg_mhm.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-        ></div>
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={bg_mhm}
+            alt="MHM initiative background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
       </div>
 
       <section className="container mx-auto px-4 my-5">
@@ -135,16 +136,16 @@ function page() {
               <ul className="list-decimal space-y-3 mt-2">
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Impacted`}{" "}
-                    <span className="font-semibold">{`2 million+ beneficiaries `}</span>{" "}
+                    {`Impacted`}{' '}
+                    <span className="font-semibold">{`2 million+ beneficiaries `}</span>{' '}
                     {`through health, gender sensitization, and education programs`}
                   </TypographyP>
                 </li>
 
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Successfully conducted `}{" "}
-                    <span className="font-semibold">{`nationwide menstrual hygiene campaigns`}</span>{" "}
+                    {`Successfully conducted `}{' '}
+                    <span className="font-semibold">{`nationwide menstrual hygiene campaigns`}</span>{' '}
                     {`in collaboration with police departments and public health authorities`}
                   </TypographyP>
                 </li>
@@ -157,8 +158,8 @@ function page() {
 
                 <li className="mx-4">
                   <TypographyP className="font-Poppins ">
-                    {`Developed the`}{" "}
-                    <span className="font-semibold">{`Gender Sensitive Men`}</span>{" "}
+                    {`Developed the`}{' '}
+                    <span className="font-semibold">{`Gender Sensitive Men`}</span>{' '}
                     {`curriculum to engage boys and men in menstrual equity.`}
                   </TypographyP>
                 </li>

@@ -1,30 +1,28 @@
-import React from "react";
-import bg from "@/public/assets/homewall.png";
-import AnimateOnScroll from "@/components/common/AOS/AnimateOnScroll";
+import React from 'react';
+import bg from '@/public/assets/homewall.png';
+import Image from 'next/image';
+import AnimateOnScroll from '@/components/common/AOS/AnimateOnScroll';
 
-import {
-  TypographyH1,
-  TypographyH2,
-  TypographyH4,
-  TypographyP,
-} from "@/components/custom/Typhographies";
-import Image from "next/image";
-import founder1 from "@/public/assets/founder/founder1.webp";
-import founder2 from "@/public/assets/founder/founder2.webp";
-import founder3 from "@/public/assets/founder/founder3.webp";
+import { TypographyH1, TypographyP } from '@/components/custom/Typhographies';
+import founder1 from '@/public/assets/founder/founder1.webp';
+import founder2 from '@/public/assets/founder/founder2.webp';
+import founder3 from '@/public/assets/founder/founder3.webp';
 
 function page() {
   return (
     <AnimateOnScroll>
       <main className="flex-grow ">
         <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-          /* Background Image */
-          <div
-            style={{ backgroundImage: `url(${bg.src})` }}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-          ></div>
-          {/* Overlay */}
-          {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
+          {/* Background Image */}
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={bg}
+              alt="Founder background"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <section className="">

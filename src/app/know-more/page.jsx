@@ -1,33 +1,27 @@
-import React from "react";
-import bg from "@/public/assets/homewall.png";
-import whatWeDoImg from "@/public/assets/what-we-do.png";
-import {
-  TypographyH1,
-  TypographyH2,
-  TypographyH3,
-  TypographyH4,
-  TypographyP,
-} from "@/components/custom/Typhographies";
-import Image from "next/image";
+import React from 'react';
+import bg from '@/public/assets/homewall.png';
+import whatWeDoImg from '@/public/assets/what-we-do.png';
+import { TypographyH2, TypographyP } from '@/components/custom/Typhographies';
+import Image from 'next/image';
 
 const whatWeDo = [
   {
-    id: "point1",
-    heading: "Empowerment through Education : ",
+    id: 'point1',
+    heading: 'Empowerment through Education : ',
     para: `Empowerment through Education is at the heart of our mission—because when a girl is educated, she becomes unstoppable. At Ladli Foundation Africa, we go beyond traditional learning by equipping young girls with essential life skills, mentorship, and access to real opportunities that enable them to break free from the cycle of poverty and social limitations. By creating safe and inclusive learning environments, we empower girls in transforming them into change agents for their families, communities, and the world at large.`,
   },
   {
-    id: "point2",
-    heading: "Health & Wellness Initiatives : ",
+    id: 'point2',
+    heading: 'Health & Wellness Initiatives : ',
     para: `We tackle critical health issues through an integrated approach focused on awareness, access, and advocacy. Our programs promote menstrual hygiene, ensure access to basic healthcare, and provide education and support around TB and HIV/AIDS. We also address mental health and emotional well-being, creating safe spaces for open dialogue and care. Together, these efforts build healthier, more resilient communities.`,
   },
   {
-    id: "point3",
+    id: 'point3',
     heading: `Gender-Based Advocacy : `,
     para: `We stand firmly against all forms of gender-based violence, working to create a world where every woman and girl feels safe, respected, and empowered. Through community outreach, legal awareness, and youth engagement, we advocate for gender equality and justice, challenging harmful norms and promoting inclusive, survivor-centered support systems across diverse communities.`,
   },
   {
-    id: "point4",
+    id: 'point4',
     heading: `Community Development : `,
     para: `We believe lasting change begins at the grassroots. By partnering with local schools, community leaders, NGOs, and changemakers, we drive holistic, sustainable development that uplifts families and empowers youth`,
   },
@@ -37,20 +31,19 @@ function page() {
   return (
     <main className="flex-grow ">
       <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-        /* Background Image */
-        <div
-          style={{ backgroundImage: `url(${bg.src})` }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-        ></div>
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/60 z-0 h-[85vh]" /> */}
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={bg}
+            alt="Know more background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
       </div>
 
       <section className="">
-        {/* <div className="text-center">
-          <TypographyH1 className="">About Us</TypographyH1>
-        </div> */}
-
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:items-center">
             <div data-aos="fade-right" className="text-left">

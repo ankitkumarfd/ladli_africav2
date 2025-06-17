@@ -15,7 +15,7 @@ function Footer() {
           <div className="w-[50%] md:w-[40%] lg:w-[20%]">
             <Image
               src={ladlilogo}
-              alt="ladli_logo"
+              alt="Ladli Foundation Africa logo"
               width={300}
               height={300}
               className="w-full"

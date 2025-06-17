@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import bg from '@/public/assets/homewall.png';
+import Image from 'next/image';
 import AnimateOnScroll from '@/components/common/AOS/AnimateOnScroll';
 import { TypographyH1, TypographyP } from '@/components/custom/Typhographies';
 
@@ -31,10 +32,15 @@ function page() {
     <AnimateOnScroll>
       <main className="flex-grow ">
         <div className="relative w-full h-[85vh] overflow-hidden home mb-12">
-          <div
-            style={{ backgroundImage: `url(${bg.src})` }}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[85vh]"
-          ></div>
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={bg}
+              alt="Donation background"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <section className="mb-10">
@@ -65,18 +71,20 @@ function page() {
                   </h4>
                   <div className="flex gap-2 justify-between items-center mb-5">
                     {Amounts.map((amt, idx) => (
-                      <div
+                      <button
+                        type="button"
                         key={idx}
+                        aria-pressed={amount === amt}
                         className={`border border-gray-100 px-5 py-2 rounded-md shadow-sm cursor-pointer ${
                           amount === amt ? 'bg-blue-500 text-white' : ''
                         }`}
-                        onClick={(e) => {
+                        onClick={() => {
                           setAmount(amt);
                           setIsSelected(true);
                         }}
                       >
-                        <span>{amt}</span>
-                      </div>
+                        {amt}
+                      </button>
                     ))}
                   </div>
 
