@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ladliAfricaLogo from "@/public/ladliAfricaLogo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +24,16 @@ export const metadata = {
     title: "Ladli Foundation Africa | Advancing Health & Education",
     description:
       "Explore Ladli Foundation Africa delivering health, education, WASH, and protection programs empowering women and youth through partnerships with dignity",
-    images: {ladliAfricaLogo},
+    images: [
+      {
+        // url: "https://africa.ladlifoundation.org/ladliAfricaLogo.png",
+        // url: "https://africa.ladlifoundation.org/africaLogo.png",
+        url: "https://africa.ladlifoundation.org/africaLogoPreview.png",
+        width: 100,
+        height: 100,
+        alt: "Ladli Foundation Africa Logo",
+      },
+    ],
     url: "https://africa.ladlifoundation.org/",
     type: "website",
   },
