@@ -7,6 +7,15 @@ import Image from 'next/image';
 import bg_hiv from '@/public/assets/bg/bg_hiv4.webp';
 import tb_and_hiv1 from '@/public/assets/initiatives/tb-and-hiv/tb-and-hiv1.jpg';
 
+export const metadata = {
+  title: "TB and HIV | Adolescent Awareness & Early Detection",
+  description: "Ladli Foundation Africa’s TB and HIV program—youth education, stigma reduction, screenings, counseling and referrals so adolescents make safe informed choices",
+  keywords: "TB and HIV",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">

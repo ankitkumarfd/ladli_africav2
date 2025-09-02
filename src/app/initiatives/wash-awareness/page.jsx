@@ -10,6 +10,15 @@ import Image from 'next/image';
 import wash1 from '@/public/assets/initiatives/wash-awareness/wash1.jpg';
 import bg_wash from '@/public/assets/bg/bg_wash.jpg';
 
+export const metadata = {
+  title: "WASH Awareness | Scalable Water, Hygiene & Sanitation Impact",
+  description: "Advance WASH Awareness with Ladli Foundation Africa—installing water points, gender-segregated toilets, plus hygiene education to protect girls and communities",
+  keywords: "wash awareness",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">
