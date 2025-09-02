@@ -7,6 +7,15 @@ import {
 import Image from 'next/image';
 import mhm1 from '@/public/assets/initiatives/mhm/mhm2.webp';
 
+export const metadata = {
+  title: "MHM | Menstrual Hygiene Management for Girls in Africa",
+  description: "Advance MHM with Ladli Foundation Africa—school-based education, reusable kits, safe disposal systems, and counselor support to enhance dignity and attendance",
+  keywords: "MHM",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">

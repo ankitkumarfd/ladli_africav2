@@ -8,6 +8,15 @@ import Image from 'next/image';
 import srh1 from '@/public/assets/initiatives/advancing-srh/srh1.jpg';
 import bg_srh from '@/public/assets/bg/bg_srh.webp';
 
+export const metadata = {
+  title: "Advancing SRH | Evidence-Led Care for Girls in Africa",
+  description: "Advancing SRH with Ladli Foundation Africa—age-appropriate education, counseling, safe spaces and referrals so adolescent girls make informed choices and thrive",
+  keywords: "advancing SRH",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">

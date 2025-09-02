@@ -1,10 +1,18 @@
-'use client';
 import React from 'react';
 import AnimateOnScroll from '@/components/common/AOS/AnimateOnScroll';
 import Image from 'next/image';
 import ShammemBaksh1 from '@/public/assets/executiveBoard/shameemBaksh1.jpeg';
 import bg from '@/public/assets/homewall.png';
 import { TypographyH1, TypographyP } from '@/components/custom/Typhographies';
+
+export const metadata = {
+  title: "Executive Board | Ladli Foundation Africa Leadership",
+  description: "Meet the executive board of Ladli Foundation Africa—leaders guiding governance, partnerships, and strategy to scale health, education, WASH, and protection",
+  keywords: "Executive Board",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
 
 function page() {
   return (

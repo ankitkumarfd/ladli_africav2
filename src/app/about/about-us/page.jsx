@@ -61,6 +61,15 @@ const whoWeAre = [
   },
 ];
 
+export const metadata = {
+  title: "About Us | Ladli Foundation Africa Mission & Impact",
+  description: "Discover Ladli Foundation Africa—mission and values advancing health education WASH and protection programs empowering women and youth across Africa with care",
+  keywords: "About Us",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">

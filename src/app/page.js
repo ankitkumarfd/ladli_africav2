@@ -69,6 +69,15 @@ const gridImages = [
   },
 ];
 
+export const metadata = {
+  title: "Ladli Foundation Africa | Advancing Health & Education",
+  description: "Explore Ladli Foundation Africa delivering health, education, WASH, and protection programs empowering women and youth through partnerships with dignity",
+  keywords: "Ladli Foundation Africa",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 export default function Home() {
   return (
     <div>

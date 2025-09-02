@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import ladlilogo from "@/public/ladlilogo.png";
+import ladliAfricaLogo from "@/public/ladliAfricaLogo.png";
 import Image from "next/image";
 
 const menu = [
@@ -81,11 +81,12 @@ function Header() {
     <header className="bg-white shadow-md fixed top-0 w-full z-50 ">
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="w-[30%] md:w-[20%]">
+        <Link href="/" className="w-[50%] md:w-[30%] lg:w-[20%]">
           <Image
-            src={ladlilogo}
+            src={ladliAfricaLogo}
             alt="Ladli Foundation Logo"
-            className="w-full h-auto"
+            // className="w-full h-auto"
+            className="w-full 2xl:w-[12vw] h-[12vh]"
           />
         </Link>
 

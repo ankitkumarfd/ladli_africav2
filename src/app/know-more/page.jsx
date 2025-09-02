@@ -27,6 +27,15 @@ const whatWeDo = [
   },
 ];
 
+export const metadata = {
+  title: "Know More | Ladli Foundation Africa Impact & Initiatives",
+  description: "Explore Know More to see how Ladli Foundation Africa advances health, education, WASH, and protection—stories, data, and ways to partner, volunteer, and donate",
+  keywords: "Know More",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <main className="flex-grow ">

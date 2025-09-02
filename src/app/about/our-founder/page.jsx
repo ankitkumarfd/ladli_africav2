@@ -8,6 +8,15 @@ import founder1 from '@/public/assets/founder/founder1.webp';
 import founder2 from '@/public/assets/founder/founder2.webp';
 import founder3 from '@/public/assets/founder/founder3.webp';
 
+export const metadata = {
+  title: "Devendra Kumar | Founder & Vision | Ladli Foundation Africa",
+  description: "Devendra Kumar—founder of Ladli Foundation Africa—championing dignity driven health education WASH and protection initiatives empowering women and youth",
+  keywords: "Devendra Kumar",
+  alternates: {
+    canonical: "https://africa.ladlifoundation.org/",
+  },
+};
+
 function page() {
   return (
     <AnimateOnScroll>

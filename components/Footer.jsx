@@ -1,5 +1,5 @@
 import React from 'react';
-import ladlilogo from '@/public/ladlilogo.png';
+import transparentLogo from "@/public/transparentLogo.png";
 import Image from 'next/image';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaFacebook } from 'react-icons/fa';
@@ -10,15 +10,15 @@ import Link from 'next/link';
 function Footer() {
   return (
     <section className="bg-gray-200">
-      <div className="w-full flex flex-col lg:flex-row  justify-between items-center py-12 container mx-auto">
+      <div className="w-full flex flex-col lg:flex-row  justify-between items-center py-8 container mx-auto">
         <div className="w-full flex flex-wrap items-start justify-between gap-8 p-4 lg:p-0">
-          <div className="w-[50%] md:w-[40%] lg:w-[20%]">
+          <div className="w-[60%] md:w-[40%] lg:w-[20%] h-[16vh]">
             <Image
-              src={ladlilogo}
+              src={transparentLogo}
               alt="Ladli Foundation Africa logo"
               width={300}
               height={300}
-              className="w-full"
+              className="w-full h-full"
             />
           </div>
 
