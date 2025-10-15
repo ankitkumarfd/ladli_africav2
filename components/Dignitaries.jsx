@@ -104,10 +104,10 @@ const dignitariesData = [
   },
   {
     id: "2",
-    name: "Late Shri Pranab Mukherjee",
-    designation: "Hon'ble 13th President of India (Bharat Ratna)",
-    data: "The grassroots initiatives of the Ladli Foundation demonstrate their unwavering commitment and profound impact on vulnerable communities. Their commitment to equal healthcare, education, and empowerment is absolutely inspirational. Their art expresses a vision that is in line with humanity's highest ideals",
-    img: pranabMukherjee,
+    name: "Smt. Droupadi Murmu",
+    designation: "Hon'ble 15th President of India",
+    data: "Ladli Foundation's tireless efforts in upliftment through grassroots work are a beacon of hope. Their dedication to the upliftment of the most vulnerable population is a remarkable model of driving positive change. Their work stands as a testament to the transformative power of compassion and action.",
+    img: droupadiMurmu,
   },
   {
     id: "3",
@@ -118,10 +118,10 @@ const dignitariesData = [
   },
   {
     id: "4",
-    name: "Smt. Droupadi Murmu",
-    designation: "Hon'ble 15th President of India",
-    data: "Ladli Foundation's tireless efforts in upliftment through grassroots work are a beacon of hope. Their dedication to the upliftment of the most vulnerable population is a remarkable model of driving positive change. Their work stands as a testament to the transformative power of compassion and action.",
-    img: droupadiMurmu,
+    name: "Late Shri Pranab Mukherjee",
+    designation: "Hon'ble 13th President of India (Bharat Ratna)",
+    data: "The grassroots initiatives of the Ladli Foundation demonstrate their unwavering commitment and profound impact on vulnerable communities. Their commitment to equal healthcare, education, and empowerment is absolutely inspirational. Their art expresses a vision that is in line with humanity's highest ideals",
+    img: pranabMukherjee,
   },
   {
     id: "5",
