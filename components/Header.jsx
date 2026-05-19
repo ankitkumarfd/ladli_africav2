@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import ladliAfricaLogo from "@/public/ladliAfricaLogo.png";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { ChevronDown, Menu, X } from "lucide-react";
+import ladliAfricaLogo from "@/public/assets/logos/ladli_africa.png";
 
 const menu = [
   { label: "Home", href: "/" },
@@ -10,13 +12,8 @@ const menu = [
     label: "About",
     dropdown: [
       { label: "About Us", href: "/about/about-us" },
-      // { label: "Our Approach", href: "/our-approach" },
       { label: "Our Founder", href: "/about/our-founder" },
       { label: "Executive Board", href: "/about/executive-board" },
-      // {
-      //   label: "International Advisory Board",
-      //   href: "/international-advisory-board",
-      // },
     ],
   },
   {
@@ -41,160 +38,170 @@ const menu = [
       },
     ],
   },
-  // {
-  //   label: "Activities",
-  //   dropdown: [
-  //     { label: "Field Activities", href: "/activities/field-activities" },
-  //     { label: "Events", href: "/activities/events" },
-  //     { label: "Conferences", href: "/activities/conferences" },
-  //     {
-  //       label: "Blogs & Article",
-  //       href: "https://blog.ladlifoundation.org/",
-  //     },
-  //     { label: "Press & Media", href: "/press" },
-  //     { label: "Gallery", href: "/gallery" },
-  //   ],
-  // },
-  // {
-  //   label: "Get Involved",
-  //   dropdown: [
-  //     { label: "Voltour", href: "/get-involved#voltour" },
-  //     { label: "Internship", href: "/get-involved#internship" },
-  //     { label: "Fellowships", href: "/get-involved#fellowship" },
-  //     { label: "Researcher", href: "/get-involved#researcher" },
-  //     { label: "CSR Partner", href: "/get-involved#csr" },
-  //   ],
-  // },
 ];
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdownIndex, setOpenDropdownIndex] = useState(null); // ✅ FIXED
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const pathname = usePathname();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const toggleDropdown = (index) => {
+  const toggleMenu = () => setIsMenuOpen((v) => !v);
+  const toggleDropdown = (index) =>
     setOpenDropdownIndex((prev) => (prev === index ? null : index));
+
+  const isActive = (href) => {
+    if (href === "/") return pathname === "/";
+    return pathname?.startsWith(href);
   };
 
   return (
-    <header className="bg-white shadow-md fixed top-0 w-full z-50 ">
-      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <nav className="container mx-auto px-4 lg:px-12 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="w-[50%] md:w-[30%] lg:w-[20%]">
+        <Link href="/" className="flex items-center shrink-0">
           <Image
             src={ladliAfricaLogo}
-            alt="Ladli Foundation Logo"
-            // className="w-full h-auto"
-            className="w-full 2xl:w-[12vw] h-[12vh]"
+            alt="Ladli Foundation Africa"
+            priority
+            className="h-12 sm:h-18 lg:h-22 w-auto object-contain"
           />
         </Link>
 
-        {/* Hamburger Button */}
-        <div className="lg:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-700 focus:outline-none"
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-8">
+          {menu.map((item, index) =>
+            !item.dropdown ? (
+              <Link
+                key={index}
+                href={item.href}
+                className={`relative font-semibold text-sm transition-colors ${
+                  isActive(item.href)
+                    ? "text-pink-600"
+                    : "text-gray-700 hover:text-pink-600"
+                }`}
+              >
+                {item.label}
+                {isActive(item.href) && (
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-pink-600 rounded-full" />
+                )}
+              </Link>
+            ) : (
+              <div key={index} className="relative group">
+                <button
+                  className={`flex items-center gap-1 font-semibold text-sm transition-colors ${
+                    item.dropdown.some((s) => isActive(s.href))
+                      ? "text-pink-600"
+                      : "text-gray-700 group-hover:text-pink-600"
+                  }`}
+                >
+                  {item.label}
+                  <ChevronDown
+                    size={16}
+                    className="transition-transform group-hover:rotate-180"
+                  />
+                  {item.dropdown.some((s) => isActive(s.href)) && (
+                    <span className="absolute -bottom-1.5 left-0 right-4 h-0.5 bg-pink-600 rounded-full" />
+                  )}
+                </button>
+                <div className="absolute left-0 top-full pt-3 hidden group-hover:block">
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden min-w-[320px] py-2">
+                    {item.dropdown.map((sub, j) => (
+                      <Link
+                        key={j}
+                        href={sub.href}
+                        className="block px-5 py-3 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+
+          <Link
+            href="/donate"
+            className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-md transition-all duration-200 hover:-translate-y-0.5"
           >
-            <svg
-              className="w-7 h-7"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={
-                  isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
-            </svg>
-          </button>
+            Contribute
+          </Link>
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-4 font-medium">
-          {renderNavLinks()}
-        </div>
+        {/* Hamburger Button (mobile) */}
+        <button
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          className="lg:hidden text-gray-700 p-1"
+        >
+          {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
       </nav>
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-white shadow-md overflow-hidden transition-all duration-300 ${
-          isMenuOpen ? "max-h-screen" : "max-h-0"
+        className={`lg:hidden bg-white shadow-lg overflow-hidden transition-[max-height] duration-300 ${
+          isMenuOpen ? "max-h-[80vh]" : "max-h-0"
         }`}
       >
-        <div className="px-4 py-2 overflow-y-auto max-h-[80vh] space-y-2">
-          {renderNavLinks(true)}
+        <div className="px-4 py-3 overflow-y-auto max-h-[78vh] space-y-1">
+          {menu.map((item, index) =>
+            !item.dropdown ? (
+              <Link
+                key={index}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-3 py-2.5 rounded-lg font-semibold text-sm ${
+                  isActive(item.href)
+                    ? "bg-pink-50 text-pink-600"
+                    : "text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <div key={index}>
+                <button
+                  onClick={() => toggleDropdown(index)}
+                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg font-semibold text-sm text-gray-800 bg-gray-50"
+                >
+                  <span>{item.label}</span>
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform ${
+                      openDropdownIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {openDropdownIndex === index && (
+                  <div className="pl-3 mt-1 space-y-1">
+                    {item.dropdown.map((sub, j) => (
+                      <Link
+                        key={j}
+                        href={sub.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-pink-50 hover:text-pink-600"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          )}
+
+          <Link
+            href="/donate"
+            onClick={() => setIsMenuOpen(false)}
+            className="block bg-pink-600 text-white text-center px-5 py-3 rounded-full font-semibold text-sm mt-3"
+          >
+            Contribute
+          </Link>
         </div>
       </div>
     </header>
   );
-
-  function renderNavLinks(isMobile = false) {
-    const baseClass =
-      "text-gray-700 hover:bg-pink-600 hover:text-white transition-all duration-300 rounded-full px-4 py-2 block text-left";
-    const dropdownWrapper = "relative group";
-    const dropdownMenu =
-      "absolute left-0 mt-1 hidden group-hover:flex flex-col bg-white shadow-md border border-gray-100 rounded-md z-10 min-w-[300px]";
-    const mobileDropdownWrapper = "space-y-1";
-    const mobileDropdownMenu = "pl-4 space-y-1";
-
-    return (
-      <>
-        {menu.map((item, index) =>
-          !item.dropdown ? (
-            <Link key={index} href={item.href} className={baseClass}>
-              {item.label}
-            </Link>
-          ) : isMobile ? (
-            <div key={index} className={mobileDropdownWrapper}>
-              <button
-                onClick={() => toggleDropdown(index)}
-                className="w-full font-semibold text-left px-2 py-2 bg-gray-100 rounded-md"
-              >
-                {item.label}
-              </button>
-              {openDropdownIndex === index && (
-                <div className={mobileDropdownMenu}>
-                  {item.dropdown.map((sub, j) => (
-                    <Link key={j} href={sub.href} className={baseClass}>
-                      {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : (
-            <div key={index} className={dropdownWrapper}>
-              <button className={baseClass}>{item.label}</button>
-              <div className={dropdownMenu}>
-                {item.dropdown.map((sub, j) => (
-                  <Link
-                    key={j}
-                    href={sub.href}
-                    className="block px-4 py-2 hover:bg-pink-600 hover:text-white transition-all duration-300"
-                  >
-                    {sub.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )
-        )}
-        <Link
-          href="/donate"
-          className="bg-pink-600 text-white px-5 py-3 rounded-full hover:bg-pink-700 transition-all duration-300 block text-center"
-        >
-          Contribute
-        </Link>
-      </>
-    );
-  }
 }
 
 export default Header;
